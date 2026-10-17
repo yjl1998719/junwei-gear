@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B1013">
+<title>钧威齿轮 · 精研至微，齿传匠心 | 武义县钧威齿轮制造有限公司</title>
+<meta name="description" content="武义县钧威齿轮制造有限公司专注电动工具、减速电机、新能源、园林工具齿轮制造，年规划产能 500 万套以上，100 余台加工设备，通过 ISO9001 质量管理体系认证。">
+<meta property="og:title" content="钧威齿轮 · 精研至微，齿传匠心">
+<meta property="og:description" content="20 余年精密齿轮制造 · 年产能 500 万套 · ISO9001 质量体系认证">
+<meta property="og:image" content="assets/share.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logo-ink.png">
+<style>
+  :root{
+    --ink:#0B1013;
+    --ink-2:#121A20;
+    --ink-3:#1B252D;
+    --steel:#5C6B77;
+    --paper:#F7F6F2;
+    --paper-2:#EFEDE5;
+    --accent:#E2661B;
+    --accent-2:#F2A03D;
+    --line:rgba(11,16,19,.12);
+    --line-dark:rgba(255,255,255,.14);
+    --radius:14px;
+    --max:1160px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body.lock{overflow:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  ::selection{background:var(--accent);color:#fff}
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+  @media(min-width:768px){.wrap{padding:0 40px}}
+
+  /* ---------- progress ---------- */
+  #progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
+
+  /* ---------- header ---------- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:calc(14px + env(safe-area-inset-top)) 0 14px;
+    transition:background .35s var(--ease),box-shadow .35s var(--ease),padding .35s var(--ease);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand img{height:38px;width:auto;transition:opacity .3s var(--ease)}
+  .brand .logo-ink{position:absolute;opacity:0;height:38px}
+  .brand .logo-white{opacity:1}
+  .brand-txt{display:none;font-size:13px;letter-spacing:.14em;color:rgba(255,255,255,.72);white-space:nowrap}
+  @media(min-width:520px){.brand-txt{display:block}}
+  .nav-links{display:none;align-items:center;gap:30px}
+  .nav-links a{font-size:14px;letter-spacing:.06em;color:rgba(255,255,255,.82);position:relative;padding:6px 0}
+  .nav-links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--accent);transition:right .35s var(--ease)}
+  .nav-links a:hover::after{right:0}
+  .nav-cta{display:none}
+  .nav-cta a{
+    display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;
+    border:1px solid rgba(255,255,255,.35);color:#fff;font-size:13.5px;letter-spacing:.08em;
+    transition:background .3s var(--ease),border-color .3s var(--ease),color .3s var(--ease);
+  }
+  .nav-cta a:hover{background:#fff;color:var(--ink);border-color:#fff}
+  .nav.solid{background:rgba(247,246,242,.92);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);box-shadow:0 1px 0 var(--line);padding-top:calc(8px + env(safe-area-inset-top));padding-bottom:8px}
+  .nav.solid .logo-white{opacity:0}
+  .nav.solid .logo-ink{opacity:1}
+  .nav.solid .brand-txt{color:var(--steel)}
+  .nav.solid .nav-links a{color:var(--ink)}
+  .nav.solid .nav-cta a{border-color:var(--line);color:var(--ink)}
+  .nav.solid .nav-cta a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .burger{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;align-items:flex-end}
+  .burger span{display:block;height:1.5px;width:24px;background:#fff;transition:transform .3s var(--ease),opacity .3s,background .3s}
+  .burger span:last-child{width:16px}
+  .nav.solid .burger span{background:var(--ink)}
+  @media(min-width:960px){
+    .nav-links{display:flex}.nav-cta{display:block}.burger{display:none}
+  }
+  .sheet{
+    position:fixed;inset:0;z-index:110;background:var(--ink);color:#fff;
+    display:flex;flex-direction:column;justify-content:center;gap:6px;padding:40px 28px;
+    opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .3s var(--ease),transform .4s var(--ease);
+  }
+  .sheet.open{opacity:1;pointer-events:auto;transform:none}
+  .sheet a{font-size:26px;font-weight:600;letter-spacing:.04em;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);display:flex;align-items:baseline;gap:14px}
+  .sheet a i{font-style:normal;font-size:11px;letter-spacing:.2em;color:var(--accent);width:26px}
+  .sheet .close{position:absolute;top:calc(20px + env(safe-area-inset-top));right:22px;width:44px;height:44px;border:1px solid rgba(255,255,255,.25);border-radius:50%;display:grid;place-items:center;font-size:20px}
+  .sheet .sheet-foot{position:absolute;bottom:calc(28px + env(safe-area-inset-bottom));left:28px;font-size:12px;letter-spacing:.16em;color:rgba(255,255,255,.45)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+    color:#fff;overflow:hidden;background:#0B1013;
+    padding-top:120px;
+  }
+  .hero-bg{position:absolute;inset:0;background:url(assets/hero.jpg) center 35%/cover no-repeat;transform:scale(1.04);filter:saturate(.85)}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:1;
+    background:
+      radial-gradient(90% 60% at 80% 8%,rgba(226,102,27,.20),transparent 60%),
+      linear-gradient(180deg,rgba(7,11,14,.80) 0%,rgba(7,11,14,.66) 32%,rgba(7,11,14,.93) 78%,#0B1013 100%);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:84px 84px;
+    mask-image:radial-gradient(70% 60% at 50% 40%,#000 30%,transparent 100%);
+    -webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000 30%,transparent 100%);
+  }
+  .gear-deco{position:absolute;right:-120px;top:14%;z-index:1;width:420px;height:420px;opacity:.13;pointer-events:none;animation:spin 70s linear infinite}
+  @media(min-width:768px){.gear-deco{width:560px;height:560px;right:-80px;top:6%}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero-inner{position:relative;z-index:2;padding-bottom:38px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.24em;color:var(--accent-2);text-transform:uppercase;margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;display:block}
+  h1{
+    margin:0;font-size:clamp(44px,12.5vw,92px);line-height:1.02;font-weight:800;letter-spacing:.02em;
+  }
+  h1 .line{display:block;overflow:hidden}
+  h1 .line>span{display:block;transform:translateY(110%);animation:rise .9s var(--ease) forwards}
+  h1 .line:nth-child(2)>span{animation-delay:.12s}
+  @keyframes rise{to{transform:none}}
+  h1 em{font-style:normal;color:var(--accent)}
+  .hero-sub{max-width:520px;margin:24px 0 0;font-size:15px;line-height:1.9;color:rgba(255,255,255,.7)}
+  @media(min-width:768px){.hero-sub{font-size:16.5px;margin-top:28px}}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:15px 26px;border-radius:999px;font-size:14px;letter-spacing:.08em;font-weight:600;
+    transition:transform .3s var(--ease),background .3s var(--ease),color .3s var(--ease),border-color .3s;
+    min-height:50px;
+  }
+  .btn svg{width:16px;height:16px;transition:transform .3s var(--ease)}
+  .btn:hover svg{transform:translateX(4px)}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 12px 30px -14px rgba(226,102,27,.9)}
+  .btn-primary:hover{background:#f0741f;transform:translateY(-2px)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.3);color:#fff}
+  .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+  .stats{
+    position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;
+    border-top:1px solid var(--line-dark);margin-top:44px;
+  }
+  @media(min-width:860px){.stats{grid-template-columns:repeat(4,1fr)}}
+  .stat{padding:20px 0;border-bottom:1px solid var(--line-dark)}
+  .stat:nth-child(odd){padding-right:16px;border-right:1px solid var(--line-dark)}
+  .stat:nth-child(even){padding-left:18px}
+  @media(min-width:860px){
+    .stat{padding:26px 26px 26px 0;border-bottom:0;border-right:1px solid var(--line-dark)}
+    .stat:nth-child(odd){border-right:1px solid var(--line-dark);padding-right:26px}
+    .stat:nth-child(even){padding-left:26px}
+    .stat:last-child{border-right:0}
+  }
+  .stat b{display:block;font-size:clamp(28px,7vw,40px);font-weight:800;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+  .stat b i{font-style:normal;font-size:.5em;font-weight:600;margin-left:3px;color:var(--accent-2)}
+  .stat span{display:block;margin-top:9px;font-size:11.5px;letter-spacing:.18em;color:rgba(255,255,255,.52)}
+
+  /* ---------- section shell ---------- */
+  section{position:relative}
+  .sec{padding:78px 0}
+  @media(min-width:768px){.sec{padding:118px 0}}
+  .sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:42px}
+  @media(min-width:900px){.sec-head{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:60px}}
+  .kicker{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.24em;color:var(--accent);font-weight:700}
+  .kicker i{font-style:normal;color:var(--steel);font-weight:500}
+  h2{margin:14px 0 0;font-size:clamp(28px,6.4vw,46px);line-height:1.16;font-weight:800;letter-spacing:.01em}
+  h2 em{font-style:normal;color:var(--accent)}
+  .sec-desc{max-width:430px;color:var(--steel);font-size:14.5px;line-height:1.9;margin:0}
+  .rule{height:1px;background:var(--line);width:100%}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;gap:44px}
+  @media(min-width:960px){.about-grid{grid-template-columns:1.05fr .95fr;gap:80px;align-items:start}}
+  .about-copy p{margin:0 0 18px;font-size:15px;line-height:2;color:#2C3A44}
+  .about-copy p:last-child{margin-bottom:0}
+  .about-copy strong{color:var(--ink);font-weight:700}
+  .about-copy .lead{font-size:17px;line-height:1.95;color:var(--ink);font-weight:500}
+  .fields{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:26px}
+  .field{background:var(--paper);padding:22px 18px;transition:background .3s var(--ease)}
+  .field:hover{background:var(--paper-2)}
+  .field span{display:block;font-size:11px;letter-spacing:.16em;color:var(--steel)}
+  .field b{display:block;margin-top:8px;font-size:17px;letter-spacing:.02em}
+  .quote{
+    position:relative;padding:26px 24px 26px 28px;border-left:2px solid var(--accent);
+    background:linear-gradient(90deg,rgba(226,102,27,.06),rgba(226,102,27,0));border-radius:0 10px 10px 0;
+    font-size:15px;line-height:1.9;color:#2C3A44;
+  }
+  .quote::before{content:"“";position:absolute;left:10px;top:-6px;font-size:46px;color:rgba(226,102,27,.3);font-family:Georgia,serif}
+  .about-media{position:relative}
+  .about-media .frame{position:relative;border-radius:16px;overflow:hidden;background:var(--ink)}
+  .about-media .frame img{width:100%;aspect-ratio:4/3;object-fit:cover;opacity:.94;transition:transform 1.2s var(--ease)}
+  .about-media:hover .frame img{transform:scale(1.04)}
+  .about-media .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,11,14,.55))}
+  .about-media .tag{
+    position:absolute;left:18px;bottom:18px;z-index:2;color:#fff;font-size:12px;letter-spacing:.18em;
+    display:flex;align-items:center;gap:9px;
+  }
+  .about-media .tag::before{content:"";width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 4px rgba(226,102,27,.25)}
+  .mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;overflow:hidden}
+  .mini-stats div{background:#fff;padding:16px 12px;text-align:center}
+  .mini-stats b{display:block;font-size:22px;font-weight:800;letter-spacing:-.01em}
+  .mini-stats b i{font-style:normal;font-size:11px;color:var(--accent);margin-left:2px}
+  .mini-stats span{font-size:10.5px;letter-spacing:.12em;color:var(--steel)}
+
+  /* ---------- timeline ---------- */
+  .timeline{position:relative;padding-left:30px}
+  @media(min-width:900px){.timeline{padding-left:0;display:grid;grid-template-columns:1fr 1fr;column-gap:80px}}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:1px;background:linear-gradient(180deg,var(--accent),rgba(11,16,19,.14) 30%,rgba(11,16,19,.14))}
+  @media(min-width:900px){.timeline::before{left:50%;top:0;bottom:0}}
+  .tl-item{position:relative;padding:0 0 34px 0}
+  @media(min-width:900px){
+    .tl-item{padding-bottom:46px}
+    .tl-item:nth-child(odd){grid-column:1;text-align:right;padding-right:0}
+    .tl-item:nth-child(even){grid-column:2;padding-top:46px}
+  }
+  .tl-item::before{
+    content:"";position:absolute;left:-30px;top:9px;width:15px;height:15px;border-radius:50%;
+    background:var(--paper);border:1.5px solid rgba(11,16,19,.25);
+  }
+  .tl-item.hot::before{border-color:var(--accent);background:var(--accent);box-shadow:0 0 0 5px rgba(226,102,27,.13)}
+  @media(min-width:900px){
+    .tl-item::before{left:auto;right:-47.5px;top:9px}
+    .tl-item:nth-child(even)::before{right:auto;left:-47.5px;top:55px}
+  }
+  .tl-year{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--accent);font-variant-numeric:tabular-nums}
+  .tl-title{font-size:16.5px;font-weight:700;margin:7px 0 6px;letter-spacing:.01em}
+  .tl-desc{font-size:13.5px;line-height:1.8;color:var(--steel);margin:0;max-width:330px}
+  @media(min-width:900px){.tl-item:nth-child(odd) .tl-desc{margin-left:auto}}
+  .plan{
+    margin-top:8px;display:flex;flex-direction:column;gap:16px;align-items:flex-start;
+    background:var(--ink);color:#fff;border-radius:16px;padding:26px 24px;position:relative;overflow:hidden;
+  }
+  @media(min-width:700px){.plan{flex-direction:row;align-items:center;justify-content:space-between;padding:30px 34px}}
+  .plan::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border:1px solid rgba(255,255,255,.1);border-radius:50%}
+  .plan .p-txt{font-size:14px;line-height:1.8;color:rgba(255,255,255,.72);max-width:520px}
+  .plan .p-txt b{color:#fff;font-size:17px;display:block;margin-bottom:4px;letter-spacing:.02em}
+  .plan .p-num{font-size:clamp(34px,8vw,52px);font-weight:800;color:var(--accent);line-height:1;white-space:nowrap}
+
+  /* ---------- culture ---------- */
+  .culture{background:var(--paper-2)}
+  .cards{display:grid;gap:16px}
+  @media(min-width:760px){.cards{grid-template-columns:1fr 1fr;gap:20px}}
+  .card{
+    position:relative;background:#fff;border:1px solid rgba(11,16,19,.08);border-radius:var(--radius);
+    padding:30px 26px 28px;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(11,16,19,.4);border-color:rgba(226,102,27,.35)}
+  .card .num{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:700}
+  .card h3{margin:14px 0 0;font-size:20px;letter-spacing:.04em;font-weight:700}
+  .card .sub{margin:4px 0 16px;font-size:11px;letter-spacing:.18em;color:var(--steel);text-transform:uppercase}
+  .card p{margin:0;font-size:14px;line-height:1.9;color:#42505B}
+  .card .glyph{position:absolute;right:16px;top:12px;font-size:76px;line-height:1;font-weight:800;color:rgba(11,16,19,.045);pointer-events:none;letter-spacing:-.04em}
+
+  /* ---------- products ---------- */
+  .tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 0 18px;scrollbar-width:none;-ms-overflow-style:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{
+    flex:0 0 auto;padding:11px 18px;border-radius:999px;border:1px solid var(--line);
+    font-size:13.5px;letter-spacing:.04em;color:var(--steel);transition:all .3s var(--ease);white-space:nowrap;
+  }
+  .tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .tab:hover{border-color:var(--ink);color:var(--ink)}
+  .tab[aria-selected="true"]:hover{color:#fff}
+  .panel{display:none}
+  .panel.active{display:block;animation:fade .5s var(--ease)}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(min-width:760px){.pgrid{grid-template-columns:repeat(3,1fr);gap:20px}}
+  .pcard{
+    position:relative;border-radius:12px;overflow:hidden;background:#E9E8E2;cursor:zoom-in;
+    border:1px solid rgba(11,16,19,.07);
+  }
+  .pcard .ph{position:relative;overflow:hidden;background:#EDECE6}
+  .pcard img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
+  @media(min-width:760px){.pcard img{aspect-ratio:4/3.4}}
+  .pcard:hover img{transform:scale(1.06)}
+  .pcard .meta{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 13px;color:#fff;background:linear-gradient(180deg,transparent,rgba(7,11,14,.78));display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+  .pcard .meta b{font-size:14.5px;letter-spacing:.02em;font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.35)}
+  .pcard .meta span{font-size:10px;letter-spacing:.1em;opacity:.75;white-space:nowrap}
+  .pnote{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:12.5px;color:var(--steel);letter-spacing:.02em}
+  .pnote::before{content:"";width:18px;height:1px;background:var(--accent);display:block;flex:0 0 auto}
+
+  /* ---------- dark capability ---------- */
+  .dark{background:var(--ink);color:#fff}
+  .dark .kicker{color:var(--accent-2)}
+  .dark .kicker i{color:rgba(255,255,255,.45)}
+  .dark h2{color:#fff}
+  .dark .sec-desc{color:rgba(255,255,255,.58)}
+  .dark .rule{background:var(--line-dark)}
+  .cap-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:12px;overflow:hidden;margin-bottom:40px}
+  @media(min-width:760px){.cap-stats{grid-template-columns:repeat(4,1fr)}}
+  .cap-stats div{background:var(--ink-2);padding:22px 18px}
+  .cap-stats b{display:block;font-size:clamp(24px,5vw,32px);font-weight:800;line-height:1;color:#fff}
+  .cap-stats b i{font-style:normal;font-size:.45em;color:var(--accent-2);margin-left:3px;font-weight:600}
+  .cap-stats span{display:block;margin-top:9px;font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.45)}
+  .egrid{display:grid;grid-template-columns:1fr;gap:14px}
+  @media(min-width:680px){.egrid{grid-template-columns:1fr 1fr;gap:18px}}
+  @media(min-width:1000px){.egrid{grid-template-columns:repeat(3,1fr)}}
+  .ecard{background:var(--ink-2);border:1px solid rgba(255,255,255,.09);border-radius:12px;overflow:hidden;transition:border-color .35s,transform .45s var(--ease);cursor:zoom-in}
+  .ecard:hover{border-color:rgba(226,102,27,.5);transform:translateY(-3px)}
+  .ecard .eph{overflow:hidden;background:#0E1519}
+  .ecard img{width:100%;aspect-ratio:16/11;object-fit:cover;transition:transform .9s var(--ease);opacity:.92}
+  .ecard:hover img{transform:scale(1.05);opacity:1}
+  .ecard .cap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 16px}
+  .ecard .cap b{font-size:14px;font-weight:600;letter-spacing:.02em}
+  .ecard .cap i{font-style:normal;font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.14em}
+
+  /* ---------- testing ---------- */
+  .tgrid{display:grid;gap:14px;margin-bottom:44px}
+  @media(min-width:760px){.tgrid{grid-template-columns:repeat(3,1fr);gap:18px}}
+  .tcard{background:#fff;border:1px solid rgba(11,16,19,.09);border-radius:12px;overflow:hidden;cursor:zoom-in;transition:box-shadow .4s,transform .4s var(--ease)}
+  .tcard:hover{transform:translateY(-3px);box-shadow:0 22px 40px -28px rgba(11,16,19,.45)}
+  .tcard img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#F1F0EB}
+  .tcard .cap{padding:15px 16px;display:flex;align-items:center;justify-content:space-between;font-size:13.5px;font-weight:600}
+  .tcard .cap i{font-style:normal;color:var(--accent);font-size:11px;letter-spacing:.1em;font-weight:500}
+  .tech{background:var(--ink);color:#fff;border-radius:16px;padding:32px 26px;position:relative;overflow:hidden}
+  @media(min-width:860px){.tech{padding:46px 48px;display:grid;grid-template-columns:.85fr 1.15fr;gap:54px}}
+  .tech h3{margin:0 0 14px;font-size:clamp(22px,4.6vw,30px);letter-spacing:.02em;line-height:1.3}
+  .tech h3 span{color:var(--accent-2);display:block;font-size:12px;letter-spacing:.2em;margin-bottom:10px;font-weight:600}
+  .tech p{margin:0;font-size:13.8px;line-height:1.95;color:rgba(255,255,255,.62)}
+  .tech ul{margin:0;padding:0;list-style:none;display:grid;gap:16px}
+  .tech li{position:relative;padding-left:26px;font-size:13.6px;line-height:1.8;color:rgba(255,255,255,.72)}
+  .tech li b{color:#fff;display:block;font-size:14px;margin-bottom:2px;font-weight:600}
+  .tech li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border:1px solid var(--accent);transform:rotate(45deg)}
+
+  /* ---------- honors ---------- */
+  .honors{display:grid;gap:16px}
+  @media(min-width:760px){.honors{grid-template-columns:1fr 1fr;gap:22px}}
+  .honor{background:#fff;border:1px solid rgba(11,16,19,.09);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .honor .himg{background:#F0EFEA;padding:14px;cursor:zoom-in}
+  .honor .himg img{width:100%;height:300px;object-fit:contain;mix-blend-mode:multiply}
+  @media(min-width:760px){.honor .himg img{height:340px}}
+  .honor .hbody{padding:20px 22px 24px;border-top:1px solid rgba(11,16,19,.07)}
+  .honor .hbody .k{font-size:10.5px;letter-spacing:.18em;color:var(--accent);font-weight:700}
+  .honor .hbody h3{margin:8px 0 12px;font-size:17px;letter-spacing:.02em}
+  .honor .hbody dl{margin:0;display:grid;gap:6px;font-size:12.5px;color:var(--steel)}
+  .honor .hbody dl div{display:flex;gap:10px}
+  .honor .hbody dt{flex:0 0 62px;color:#8B979F}
+  .honor .hbody dd{margin:0;color:#33424D}
+
+  /* ---------- clients ---------- */
+  .clients{background:var(--paper-2)}
+  .logos{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(11,16,19,.09);border:1px solid rgba(11,16,19,.09);border-radius:14px;overflow:hidden}
+  @media(min-width:560px){.logos{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:900px){.logos{grid-template-columns:repeat(5,1fr)}}
+  .logo-cell{background:#fff;display:grid;place-items:center;padding:20px;aspect-ratio:3/2}
+  .logo-cell img{max-height:52px;max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.62;transition:filter .4s var(--ease),opacity .4s,transform .4s var(--ease)}
+  .logo-cell:hover img{filter:none;opacity:1;transform:scale(1.04)}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--ink);color:#fff;overflow:hidden;position:relative}
+  .contact::before{content:"";position:absolute;right:-10%;top:-20%;width:60vw;max-width:640px;aspect-ratio:1;border:1px solid rgba(255,255,255,.07);border-radius:50%}
+  .contact::after{content:"";position:absolute;right:-2%;top:-6%;width:42vw;max-width:420px;aspect-ratio:1;border:1px solid rgba(255,255,255,.05);border-radius:50%}
+  .cgrid{position:relative;z-index:2;display:grid;gap:40px}
+  @media(min-width:900px){.cgrid{grid-template-columns:1.15fr .85fr;gap:80px;align-items:center}}
+  .contact h2{color:#fff;font-size:clamp(32px,7.5vw,56px);line-height:1.1}
+  .contact .lead{color:rgba(255,255,255,.6);margin:20px 0 0;max-width:440px;font-size:14.5px;line-height:1.9}
+  .crows{margin-top:40px;display:grid;gap:0;border-top:1px solid var(--line-dark)}
+  .crow{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--line-dark)}
+  .crow .ic{flex:0 0 34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid;place-items:center;color:var(--accent-2)}
+  .crow .ic svg{width:15px;height:15px}
+  .crow .tx span{display:block;font-size:10.5px;letter-spacing:.18em;color:rgba(255,255,255,.4);margin-bottom:3px}
+  .crow .tx b{font-size:14.5px;font-weight:500;letter-spacing:.02em;line-height:1.6}
+  .crow .tx a{color:var(--accent-2);border-bottom:1px solid rgba(242,160,61,.35)}
+  .qr-card{background:#fff;border-radius:16px;padding:24px 24px 20px;color:var(--ink);text-align:center;max-width:330px;margin:0 auto;width:100%;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
+  .qr-card .qt{font-size:10.5px;letter-spacing:.22em;color:var(--accent);font-weight:700}
+  .qr-card img{width:100%;max-width:230px;margin:14px auto 10px;border-radius:6px}
+  .qr-card p{margin:0;font-size:13px;color:#3B4A55;line-height:1.7}
+  .qr-card p b{display:block;font-size:15px;color:var(--ink);margin-bottom:2px}
+  .qr-hint{font-size:11px;color:#8B979F;letter-spacing:.06em;margin-top:8px}
+
+  footer{background:#080C0F;color:rgba(255,255,255,.42);padding:30px 0 calc(30px + env(safe-area-inset-bottom));font-size:11.5px;letter-spacing:.06em}
+  footer .wrap{display:flex;flex-direction:column;gap:10px}
+  @media(min-width:700px){footer .wrap{flex-direction:row;align-items:center;justify-content:space-between}}
+  footer b{color:rgba(255,255,255,.72);font-weight:500}
+
+  /* ---------- floating ---------- */
+  #top{
+    position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:80;
+    width:44px;height:44px;border-radius:50%;background:rgba(11,16,19,.78);color:#fff;
+    display:grid;place-items:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    opacity:0;pointer-events:none;transform:translateY(8px);transition:all .35s var(--ease);
+    border:1px solid rgba(255,255,255,.14);
+  }
+  #top.show{opacity:1;pointer-events:auto;transform:none}
+  #top svg{width:15px;height:15px}
+
+  /* ---------- lightbox ---------- */
+  .lb{position:fixed;inset:0;z-index:200;background:rgba(6,9,11,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
+  .lb.open{opacity:1;pointer-events:auto}
+  .lb img{max-width:100%;max-height:78vh;object-fit:contain;border-radius:4px;transform:scale(.97);transition:transform .35s var(--ease)}
+  .lb.open img{transform:none}
+  .lb .cap{color:rgba(255,255,255,.65);font-size:12.5px;letter-spacing:.06em;margin-top:16px;text-align:center}
+  .lb .x{position:absolute;top:calc(14px + env(safe-area-inset-top));right:16px;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;color:#fff;font-size:18px}
+  .lb .navb{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:none;place-items:center;color:#fff}
+  @media(min-width:760px){.lb .navb{display:grid}}
+  .lb .navb.prev{left:18px}.lb .navb.next{right:18px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    h1 .line>span{animation:none;transform:none}
+    .gear-deco{animation:none}
+    html{scroll-behavior:auto}
+  }
+  .num-tab{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="钧威齿轮首页">
+      <span style="position:relative;display:inline-flex">
+        <img class="logo-white" src="assets/logo-white.png" alt="钧威齿轮 JUNWEI">
+        <img class="logo-ink" src="assets/logo-ink.png" alt="" aria-hidden="true">
+      </span>
+      <span class="brand-txt">武义县钧威齿轮制造有限公司</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#about">关于钧威</a>
+      <a href="#history">发展历程</a>
+      <a href="#products">产品中心</a>
+      <a href="#capability">制造能力</a>
+      <a href="#testing">检测能力</a>
+      <a href="#contact">联系我们</a>
+    </nav>
+    <div class="nav-cta"><a href="#contact">洽谈合作 →</a></div>
+    <button class="burger" id="burger" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <button class="close" id="sheetClose" aria-label="关闭菜单">✕</button>
+  <a href="#about"><i>01</i>关于钧威</a>
+  <a href="#history"><i>02</i>发展历程</a>
+  <a href="#culture"><i>03</i>企业文化</a>
+  <a href="#products"><i>04</i>产品中心</a>
+  <a href="#capability"><i>05</i>制造能力</a>
+  <a href="#testing"><i>06</i>检测能力</a>
+  <a href="#contact"><i>07</i>联系我们</a>
+  <div class="sheet-foot">WUYI JUNWEI GEAR MFG. CO., LTD.</div>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" role="img" aria-label="钧威齿轮生产车间"></div>
+    <svg class="gear-deco" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+      <circle cx="200" cy="200" r="150" stroke="#fff" stroke-width="26" stroke-dasharray="26 20"/>
+      <circle cx="200" cy="200" r="112" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="200" cy="200" r="46" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="200" cy="200" r="150" stroke="#E2661B" stroke-width="1.5"/>
+      <path d="M200 88v44M200 268v44M88 200h44M268 200h44" stroke="#fff" stroke-width="1.5"/>
+    </svg>
+
+    <div class="wrap hero-inner">
+      <div class="eyebrow">PRECISION GEAR MANUFACTURING · SINCE 2005</div>
+      <h1>
+        <span class="line"><span>精研至微</span></span>
+        <span class="line"><span><em>齿</em>传匠心</span></span>
+      </h1>
+      <p class="hero-sub">二十年专注精密齿轮制造，为电动工具、减速电机、新能源与园林工具行业，提供高精度、高耐用性的传动核心部件。</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">浏览产品系列
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">联系钧威</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b><span class="num-tab" data-count="500">0</span><i>万套+</i></b><span>年规划产能</span></div>
+        <div class="stat"><b><span class="num-tab" data-count="100">0</span><i>余台</i></b><span>各式加工设备</span></div>
+        <div class="stat"><b><span class="num-tab" data-count="20">0</span><i>余年</i></b><span>齿轮制造积淀</span></div>
+        <div class="stat"><b style="font-size:clamp(22px,5.4vw,30px);letter-spacing:.02em">ISO<i>9001</i></b><span>质量管理体系认证</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>01</i>ABOUT JUNWEI</div>
+          <h2>扎根武义的<br>精密齿轮制造工厂</h2>
+        </div>
+        <p class="sec-desc">从电动工具齿轮起步，逐步构建覆盖减速电机、园林工具、农用机械与新能源车的产品家族，以稳定品质服务全国客户。</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">武义县钧威齿轮制造有限公司是一家专业生产<strong>电动工具、减速电机、新能源、园林工具齿轮</strong>的厂家。</p>
+          <p>主要产品涵盖电镐、电锤、偏心轴及 18 / 22 / 28 / 32 系列、老年车传动齿轮等，年规划产能达 <strong>500 万套以上</strong>，并持续扩充产能，充分满足不同客户的产品需求。</p>
+          <p>公司生产设备精良，拥有各式加工设备 <strong>100 余台</strong>，持续导入数控机床、自动化滚齿机、车铣复合机、自动外圆磨、数控磨齿机等先进装备。技术力量雄厚、工艺先进，严格按照 ISO 质量管理体系标准执行，并通过 <strong>GB/T19001-2016 / ISO9001:2015</strong> 认证，可靠的产品品质深受广大客户肯定，销售网络覆盖全国各地。</p>
+          <p>多年来，公司导入精益生产管理，在现场 6S 管理、品质体制构建、生产计划管理等方面共同着力，多次荣获客户<strong>最佳供应商</strong>称号。竭诚欢迎广大客户来电来函洽谈合作，携手创造辉煌的明天。</p>
+        </div>
+
+        <div class="reveal">
+          <div class="fields">
+            <div class="field"><span>核心领域</span><b>电动工具齿轮</b></div>
+            <div class="field"><span>产品家族</span><b>减速电机齿轮</b></div>
+            <div class="field"><span>新兴方向</span><b>新能源车齿轮</b></div>
+            <div class="field"><span>细分领域</span><b>园林工具齿轮</b></div>
+          </div>
+          <div class="about-media">
+            <div class="frame">
+              <img src="assets/p-reducer-new.jpg" alt="钧威齿轮产品" loading="lazy" style="aspect-ratio:16/10">
+              <div class="tag">精密制造 · 稳定交付</div>
+            </div>
+            <div class="mini-stats">
+              <div><b>2005</b><span>创立年份</span></div>
+              <div><b>500<i>万套+</i></b><span>年规划产能</span></div>
+              <div><b>ISO<i>9001</i></b><span>体系认证</span></div>
+            </div>
+          </div>
+          <div class="quote">诚信是企业的立身之本。急客户所急，想客户所想，心系客户，贴近市场，真诚服务。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="sec" id="history" style="background:#fff">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>02</i>MILESTONES</div>
+          <h2>一步一个齿印<br>走到今天</h2>
+        </div>
+        <p class="sec-desc">从壶山钧威齿轮厂到岗头工业区的新工厂，二十余年只做一件事：把齿轮做好。</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-year">2005</div>
+          <h3 class="tl-title">壶山钧威齿轮厂成立</h3>
+          <p class="tl-desc">公司前身为武义县壶山钧威齿轮厂，主要生产电动工具类齿轮。</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-year">2006 — 2010</div>
+          <h3 class="tl-title">产能规模爆发式增长</h3>
+          <p class="tl-desc">通过不断努力，产量规模实现突破，为后续扩张打下基础。</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-year">2012</div>
+          <h3 class="tl-title">搬迁白洋渡，建立新工厂</h3>
+          <p class="tl-desc">新厂区落成，生产条件与产能同步升级。</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-year">2015</div>
+          <h3 class="tl-title">导入减速机系列齿轮</h3>
+          <p class="tl-desc">减速机系列齿轮产品落地，产品家族进一步健全。</p>
+        </div>
+        <div class="tl-item reveal hot">
+          <div class="tl-year">2018.01.18</div>
+          <h3 class="tl-title">公司正式成立</h3>
+          <p class="tl-desc">武义县钧威齿轮制造有限公司成立，开启发展的新征程。</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-year">2022.10</div>
+          <h3 class="tl-title">迁入岗头工业区</h3>
+          <p class="tl-desc">生产规模进一步扩大到年产能 500 万套以上。</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-year">2024.06</div>
+          <h3 class="tl-title">精细化管理体系落地</h3>
+          <p class="tl-desc">建立精细化管理体系，导入精益生产管理。</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-year">2024.08</div>
+          <h3 class="tl-title">通过 ISO9001 认证</h3>
+          <p class="tl-desc">同年 8 月通过 9001 质量体系认证，公司正式走上规范化道路。</p>
+        </div>
+        <div class="tl-item reveal" style="grid-column:1/-1">
+          <div class="plan">
+            <div class="p-txt"><b>长期规划</b>在 2024 年基础上，持续扩充产能与工艺能力。</div>
+            <div class="p-num">2027 · 产值翻番</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE -->
+  <section class="sec culture" id="culture">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>03</i>OUR CULTURE</div>
+          <h2>把话说进<br>每一道齿形里</h2>
+        </div>
+        <p class="sec-desc">使命、愿景、价值观与企业精神，最终都落在产品的精度与交付的稳定上。</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="glyph">01</div>
+          <div class="num">MISSION / 企业使命</div>
+          <h3>提供高精度、高耐用性的核心部件</h3>
+          <p>秉承为行业提供高精度、高耐用性齿轮核心部件的企业理念，通过持续技术革新与工艺优化，帮助客户提升产品竞争力。</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph">02</div>
+          <div class="num">VISION / 企业愿景</div>
+          <h3>成为行业齿轮制造优选供应商</h3>
+          <p>3–5 年成为行业齿轮制造优选供应商，以稳定可靠的产品质量和快速响应的服务能力赢得客户深度认可；持续优化生产流程、降低成本、提升效率，打造高性价比的齿轮产品。</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph">03</div>
+          <div class="num">VALUES / 价值观</div>
+          <h3>精研至微，齿传匠心</h3>
+          <p>聚焦齿轮制造核心领域，以毫厘必究的态度雕琢每一个产品细节，用极致工艺诠释匠人精神，为客户提供超越期待的精密传动部件。</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph">04</div>
+          <div class="num">SPIRIT / 企业精神</div>
+          <h3>脚踏实地，精益求精</h3>
+          <p>立足齿轮制造主责主业，以务实态度夯实生产根基，以精益求精的作风将每个产品打造成精品，用实干铸就行业标杆。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="sec" id="products">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>04</i>PRODUCTS</div>
+          <h2>一个齿系<br>一套解决方案</h2>
+        </div>
+        <p class="sec-desc">电动工具、减速电机、其它细分领域三大产品线，覆盖电锤、电镐、缸套、减速机、立体车库、农机、园林与新能源车等应用。</p>
+      </div>
+
+      <div class="reveal">
+        <div class="tabs" role="tablist" aria-label="产品分类">
+          <button class="tab" role="tab" aria-selected="true" aria-controls="pt1" id="tab1" data-cat="t1">电动工具系列</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="pt2" id="tab2" data-cat="t2">减速电机系列</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="pt3" id="tab3" data-cat="t3">其它细分领域</button>
+        </div>
+
+        <div class="panel active" id="pt1" role="tabpanel" aria-labelledby="tab1">
+          <div class="pgrid">
+            <figure class="pcard" data-zoom="assets/p-hammer.jpg" data-caption="电锤系列">
+              <div class="ph"><img src="assets/p-hammer.jpg" alt="电锤系列齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>电锤系列</b><span>POWER TOOLS</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-breaker.jpg" data-caption="电镐系列">
+              <div class="ph"><img src="assets/p-breaker.jpg" alt="电镐系列齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>电镐系列</b><span>POWER TOOLS</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-cylinder.jpg" data-caption="缸套系列">
+              <div class="ph"><img src="assets/p-cylinder.jpg" alt="缸套系列" loading="lazy"></div>
+              <figcaption class="meta"><b>缸套系列</b><span>POWER TOOLS</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="panel" id="pt2" role="tabpanel" aria-labelledby="tab2">
+          <div class="pgrid">
+            <figure class="pcard" data-zoom="assets/p-reducer.jpg" data-caption="减速机系列">
+              <div class="ph"><img src="assets/p-reducer.jpg" alt="减速机系列齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>减速机系列</b><span>GEAR MOTOR</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-reducer-new.jpg" data-caption="新品减速机系列">
+              <div class="ph"><img src="assets/p-reducer-new.jpg" alt="新品减速机系列" loading="lazy"></div>
+              <figcaption class="meta"><b>新品减速机系列</b><span>GEAR MOTOR</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-parking.jpg" data-caption="立体车库减速电机系列">
+              <div class="ph"><img src="assets/p-parking.jpg" alt="立体车库减速电机系列" loading="lazy"></div>
+              <figcaption class="meta"><b>立体车库减速电机</b><span>GEAR MOTOR</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="panel" id="pt3" role="tabpanel" aria-labelledby="tab3">
+          <div class="pgrid">
+            <figure class="pcard" data-zoom="assets/p-agri.jpg" data-caption="农用机械系列">
+              <div class="ph"><img src="assets/p-agri.jpg" alt="农用机械系列齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>农用机械系列</b><span>AGRICULTURE</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-gearbox.jpg" data-caption="变速箱系列">
+              <div class="ph"><img src="assets/p-gearbox.jpg" alt="变速箱系列齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>变速箱系列</b><span>TRANSMISSION</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-garden.jpg" data-caption="园林工具系列">
+              <div class="ph"><img src="assets/p-garden.jpg" alt="园林工具系列齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>园林工具系列</b><span>GARDEN TOOLS</span></figcaption>
+            </figure>
+            <figure class="pcard" data-zoom="assets/p-ev.jpg" data-caption="新能源车系列">
+              <div class="ph"><img src="assets/p-ev.jpg" alt="新能源车传动齿轮" loading="lazy"></div>
+              <figcaption class="meta"><b>新能源车系列</b><span>NEW ENERGY</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <p class="pnote">18 / 22 / 28 / 32 系列及老年车传动齿轮等常规产品持续供货，亦可按客户需求开发配套齿轮。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPABILITY -->
+  <section class="sec dark" id="capability">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>05</i>MANUFACTURING</div>
+          <h2>100 余台设备<br>撑起稳定产能</h2>
+        </div>
+        <p class="sec-desc">数控机床、自动化滚齿机、车铣复合机、自动外圆磨、数控磨齿机持续导入，设备更新迭代不停。</p>
+      </div>
+
+      <div class="cap-stats reveal">
+        <div><b><span class="num-tab" data-count="100">0</span><i>余台</i></b><span>各式加工设备</span></div>
+        <div><b><span class="num-tab" data-count="500">0</span><i>万套+</i></b><span>年规划产能</span></div>
+        <div><b>6<i>S</i></b><span>现场管理体系</span></div>
+        <div><b>ISO<i>9001</i></b><span>质量体系认证</span></div>
+      </div>
+
+      <div class="egrid">
+        <figure class="ecard" data-zoom="assets/e-1.jpg" data-caption="立式数控滚齿机">
+          <div class="eph"><img src="assets/e-1.jpg" alt="立式数控滚齿机" loading="lazy"></div>
+          <figcaption class="cap"><b>立式数控滚齿机</b><i>CNC HOBBING</i></figcaption>
+        </figure>
+        <figure class="ecard" data-zoom="assets/e-2.jpg" data-caption="立式数控滚齿机">
+          <div class="eph"><img src="assets/e-2.jpg" alt="立式数控滚齿机" loading="lazy"></div>
+          <figcaption class="cap"><b>立式数控滚齿机</b><i>CNC HOBBING</i></figcaption>
+        </figure>
+        <figure class="ecard" data-zoom="assets/e-3.jpg" data-caption="秦川数控磨齿机">
+          <div class="eph"><img src="assets/e-3.jpg" alt="秦川数控磨齿机" loading="lazy"></div>
+          <figcaption class="cap"><b>秦川数控磨齿机</b><i>GEAR GRINDING</i></figcaption>
+        </figure>
+        <figure class="ecard" data-zoom="assets/e-4.jpg" data-caption="卧式全自动滚齿机">
+          <div class="eph"><img src="assets/e-4.jpg" alt="卧式全自动滚齿机" loading="lazy"></div>
+          <figcaption class="cap"><b>卧式全自动滚齿机</b><i>AUTO HOBBING</i></figcaption>
+        </figure>
+        <figure class="ecard" data-zoom="assets/e-5.jpg" data-caption="全自动外圆磨床">
+          <div class="eph"><img src="assets/e-5.jpg" alt="全自动外圆磨床" loading="lazy"></div>
+          <figcaption class="cap"><b>全自动外圆磨床</b><i>CYLINDRICAL GRINDING</i></figcaption>
+        </figure>
+        <figure class="ecard" data-zoom="assets/e-6.jpg" data-caption="车铣复合式加工中心">
+          <div class="eph"><img src="assets/e-6.jpg" alt="车铣复合式加工中心" loading="lazy"></div>
+          <figcaption class="cap"><b>车铣复合式加工中心</b><i>TURN-MILL CENTER</i></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTING -->
+  <section class="sec" id="testing" style="background:#fff">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>06</i>INSPECTION</div>
+          <h2>每一件产品<br>都经过数据说话</h2>
+        </div>
+        <p class="sec-desc">齿轮检测仪器、双面啮合测量仪与啮齿机组成检测线，用数据确认每一批齿轮的啮合品质。</p>
+      </div>
+
+      <div class="tgrid">
+        <figure class="tcard" data-zoom="assets/t-1.jpg" data-caption="齿轮检测仪器">
+          <img src="assets/t-1.jpg" alt="齿轮检测仪器" loading="lazy">
+          <figcaption class="cap"><span>齿轮检测仪器</span><i>INSPECTION</i></figcaption>
+        </figure>
+        <figure class="tcard" data-zoom="assets/t-2.jpg" data-caption="齿轮双面啮合测量仪">
+          <img src="assets/t-2.jpg" alt="齿轮双面啮合测量仪" loading="lazy">
+          <figcaption class="cap"><span>齿轮双面啮合测量仪</span><i>MEASUREMENT</i></figcaption>
+        </figure>
+        <figure class="tcard" data-zoom="assets/t-3.jpg" data-caption="齿轮啮齿机">
+          <img src="assets/t-3.jpg" alt="齿轮啮齿机" loading="lazy">
+          <figcaption class="cap"><span>齿轮啮齿机</span><i>TESTING</i></figcaption>
+        </figure>
+      </div>
+
+      <div class="tech reveal">
+        <div>
+          <h3><span>CORE TECHNOLOGY</span>HT200 型齿轮测量中心</h3>
+          <p>采用电子展成式测量原理，可测量各种形状的直齿、斜齿圆柱齿轮及齿轮加工刀具。仪器采用天然花岗岩基座、高精密滚动导向系统与运动控制系统，机械结构经有限元分析优化设计，保证精度稳定性。</p>
+        </div>
+        <ul>
+          <li><b>高精度传感系统</b>采用瑞士高精度测微传感器，配合高精度一维半传感器装置及进口数据采集处理系统，保证测量精度。</li>
+          <li><b>多标准评值</b>测量结果可按 GB、ISO、DIN、JIS、AGMA 等多种标准评值并打印报告单。</li>
+          <li><b>标准齿轮自动修正</b>增加标准齿轮偏心误差修正功能，自动完成测量与修正并存入计算机，提升测量精度与重复性。</li>
+          <li><b>突跳点分离处理</b>将毛刺、磕碰引起的突跳点从 FI 中分离，准确区分一齿径向综合误差与毛刺磕碰点。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONORS -->
+  <section class="sec" id="honors" style="background:var(--paper-2)">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>07</i>CERTIFICATION</div>
+          <h2>资质与认可</h2>
+        </div>
+        <p class="sec-desc">体系认证与客户评价，是钧威齿轮长期稳定供货的注脚。</p>
+      </div>
+      <div class="honors">
+        <article class="honor reveal">
+          <div class="himg" data-zoom="assets/cert-iso.jpg" data-caption="质量管理体系认证证书">
+            <img src="assets/cert-iso.jpg" alt="质量管理体系认证证书" loading="lazy">
+          </div>
+          <div class="hbody">
+            <div class="k">ISO 9001 · KCB CERTIFICATION</div>
+            <h3>质量管理体系认证证书</h3>
+            <dl>
+              <div><dt>注册号</dt><dd>626024Q11107R0</dd></div>
+              <div><dt>认证范围</dt><dd>齿轮和齿轴（电动/手动工具、农用及园林金属工具、减速箱用）的生产</dd></div>
+              <div><dt>有效期至</dt><dd>2027 年 09 月 29 日</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="honor reveal">
+          <div class="himg" data-zoom="assets/award.jpg" data-caption="2021 年度最佳供应商">
+            <img src="assets/award.jpg" alt="2021 年度最佳供应商奖牌" loading="lazy">
+          </div>
+          <div class="hbody">
+            <div class="k">CUSTOMER RECOGNITION</div>
+            <h3>2021 年度最佳供应商</h3>
+            <dl>
+              <div><dt>授予方</dt><dd>合作客户</dd></div>
+              <div><dt>评价</dt><dd>品质稳定、交付可靠，与客户携手进步与发展</dd></div>
+              <div><dt>管理</dt><dd>现场 6S · 品质体制 · 生产计划管理</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="sec clients" id="clients">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="kicker"><i>08</i>PARTNERS</div>
+          <h2>服务客户（部分）</h2>
+        </div>
+        <p class="sec-desc">与行业客户长期配套合作，用稳定的齿轮品质参与他们的产品。</p>
+      </div>
+      <div class="logos reveal">
+        <div class="logo-cell"><img src="assets/c-1.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-2.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-3.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-4.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-5.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-6.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-7.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-8.jpg" alt="合作客户"></div>
+        <div class="logo-cell"><img src="assets/c-9.jpg" alt="合作客户"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec contact" id="contact">
+    <div class="wrap">
+      <div class="cgrid">
+        <div class="reveal">
+          <div class="kicker" style="color:var(--accent-2)"><i style="color:rgba(255,255,255,.4)">09</i>CONTACT</div>
+          <h2>把下一件齿轮<br>交给我们</h2>
+          <p class="lead">无论批量配套还是新品开发，欢迎来电来函，钧威齿轮愿与您一起把产品做得更稳、更准。</p>
+          <div class="crows">
+            <div class="crow">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+              <div class="tx"><span>公司地址</span><b>浙江省金华市武义县岗头工业区</b></div>
+            </div>
+            <div class="crow">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V6a2 2 0 012-2h8a2 2 0 012 2v14M4 20h12M4 20H2m16 0h4M16 9h4a2 2 0 012 2v9"/><path d="M8 8h4M8 12h4"/></svg></div>
+              <div class="tx"><span>主营产品</span><b>电动工具 / 减速电机 / 新能源 / 园林工具齿轮</b></div>
+            </div>
+            <div class="crow" id="phoneRow" hidden>
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h3l2 5-2.5 1.5a13 13 0 006 6L15 13l5 2v3a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg></div>
+              <div class="tx"><span>联系电话</span><b><a id="phoneLink" href="#"></a></b></div>
+            </div>
+            <div class="crow">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+              <div class="tx"><span>合作方式</span><b>来图来样 · 批量配套 · 新品开发</b></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="qr-card">
+            <div class="qt">SCAN TO VIEW</div>
+            <img src="assets/qr.png" alt="微信扫码查看钧威齿轮企业宣传页">
+            <p><b>微信扫一扫 · 查看企业宣传页</b>长按识别二维码，也可转发给朋友</p>
+            <div class="qr-hint">WUYI JUNWEI GEAR MFG. CO., LTD.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year">2026</span> <b>武义县钧威齿轮制造有限公司</b> · 保留所有权利</div>
+    <div>精研至微，齿传匠心 · JUNWEI GEAR</div>
+  </div>
+</footer>
+
+<a href="#top" id="top" aria-label="回到顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+
+<div class="lb" id="lb" aria-modal="true" role="dialog" aria-label="图片查看">
+  <button class="x" id="lbClose" aria-label="关闭">✕</button>
+  <button class="navb prev" id="lbPrev" aria-label="上一张">‹</button>
+  <img id="lbImg" src="" alt="">
+  <div class="cap" id="lbCap"></div>
+  <button class="navb next" id="lbNext" aria-label="下一张">›</button>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var $=function(s,c){return (c||document).querySelector(s)};
+  var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  /* header state + progress */
+  var nav=$('#nav'), bar=$('#progress'), topBtn=$('#top');
+  function onScroll(){
+    var y=window.pageYOffset||document.documentElement.scrollTop;
+    nav.classList.toggle('solid', y>60);
+    topBtn.classList.toggle('show', y>700);
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0? Math.min(100,y/h*100):0)+'%';
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  /* mobile sheet */
+  var sheet=$('#sheet'), burger=$('#burger');
+  function closeSheet(){sheet.classList.remove('open');sheet.setAttribute('aria-hidden','true');burger.setAttribute('aria-expanded','false');document.body.classList.remove('lock')}
+  burger.addEventListener('click',function(){
+    var open=!sheet.classList.contains('open');
+    sheet.classList.toggle('open',open);
+    sheet.setAttribute('aria-hidden',String(!open));
+    burger.setAttribute('aria-expanded',String(open));
+    document.body.classList.toggle('lock',open);
+  });
+  $('#sheetClose').addEventListener('click',closeSheet);
+  $$('#sheet a').forEach(function(a){a.addEventListener('click',closeSheet)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeSheet();closeLb()}});
+
+  /* reveal */
+  var reveals=$$('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    reveals.forEach(function(el){io.observe(el)});
+  }else{reveals.forEach(function(el){el.classList.add('in')})}
+
+  /* counters */
+  function runCount(el){
+    var target=parseFloat(el.getAttribute('data-count')), dur=1400, t0=null;
+    function step(t){
+      if(!t0)t0=t;
+      var p=Math.min(1,(t-t0)/dur), e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*e);
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counts=$$('[data-count]');
+  if('IntersectionObserver' in window){
+    var co=new IntersectionObserver(function(es){
+      es.forEach(function(en){if(en.isIntersecting){runCount(en.target);co.unobserve(en.target)}});
+    },{threshold:.6});
+    counts.forEach(function(el){co.observe(el)});
+  }else{counts.forEach(function(el){el.textContent=el.getAttribute('data-count')})}
+
+  /* product tabs */
+  var tabs=$$('.tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click',function(){
+      tabs.forEach(function(t){t.setAttribute('aria-selected','false')});
+      tab.setAttribute('aria-selected','true');
+      $$('.panel').forEach(function(p){p.classList.remove('active')});
+      var panel=document.getElementById('pt'+tab.getAttribute('data-cat').slice(1));
+      if(panel)panel.classList.add('active');
+    });
+  });
+
+  /* lightbox */
+  var lb=$('#lb'), lbImg=$('#lbImg'), lbCap=$('#lbCap'), items=[], idx=0;
+  function collect(){items=$$('[data-zoom]')}
+  function openLb(i){
+    collect();
+    if(!items.length)return;
+    idx=(i+items.length)%items.length;
+    var el=items[idx];
+    lbImg.src=el.getAttribute('data-zoom');
+    lbImg.alt=el.getAttribute('data-caption')||'';
+    lbCap.textContent=el.getAttribute('data-caption')||'';
+    lb.classList.add('open');document.body.classList.add('lock');
+  }
+  function closeLb(){lb.classList.remove('open');document.body.classList.remove('lock')}
+  document.addEventListener('click',function(e){
+    var el=e.target.closest?e.target.closest('[data-zoom]'):null;
+    if(el){
+      e.preventDefault();
+      collect();
+      openLb(items.indexOf(el));
+    }
+  });
+  $('#lbClose').addEventListener('click',closeLb);
+  $('#lbPrev').addEventListener('click',function(e){e.stopPropagation();openLb(idx-1)});
+  $('#lbNext').addEventListener('click',function(e){e.stopPropagation();openLb(idx+1)});
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+  document.addEventListener('keydown',function(e){
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='ArrowLeft')openLb(idx-1);
+    if(e.key==='ArrowRight')openLb(idx+1);
+  });
+
+  /* lead phone (configured by build) */
+  var PHONE='';
+  if(PHONE){
+    var row=document.getElementById('phoneRow'), link=document.getElementById('phoneLink');
+    row.hidden=false; link.textContent=PHONE; link.href='tel:'+PHONE.replace(/\s/g,'');
+  }
+})();
+</script>
+</body>
+</html>
