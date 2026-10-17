@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0B1013">
 <title>钧威齿轮 · 精研至微，齿传匠心 | 武义县钧威齿轮制造有限公司</title>
-<meta name="description" content="武义县钧威齿轮制造有限公司专注电动工具、减速电机、新能源、园林工具齿轮制造，年规划产能 500 万套以上，100 余台加工设备，通过 ISO9001 质量管理体系认证。">
+<meta name="description" content="武义县钧威齿轮制造有限公司专注电动工具、减速电机、新能源、园林工具齿轮制造，年规划产能 500 万套以上，100 余台加工设备，ISO9001 认证，浙江省科技型中小企业。总经理 俞建忠，电话 137 5894 6885。">
 <meta property="og:title" content="钧威齿轮 · 精研至微，齿传匠心">
 <meta property="og:description" content="20 余年精密齿轮制造 · 年产能 500 万套 · ISO9001 质量体系认证">
 <meta property="og:image" content="assets/share.jpg">
@@ -32,7 +32,7 @@
   body{
     margin:0;background:var(--paper);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","HarmonyOS Sans SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;
+    font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
   body.lock{overflow:hidden}
@@ -102,7 +102,7 @@
   .hero{
     position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
     color:#fff;overflow:hidden;background:#0B1013;
-    padding-top:120px;
+    padding-top:110px;
   }
   .hero-bg{position:absolute;inset:0;background:url(assets/hero.jpg) center 35%/cover no-repeat;transform:scale(1.04);filter:saturate(.85)}
   .hero::before{
@@ -132,9 +132,12 @@
   h1 .line:nth-child(2)>span{animation-delay:.12s}
   @keyframes rise{to{transform:none}}
   h1 em{font-style:normal;color:var(--accent)}
-  .hero-sub{max-width:520px;margin:24px 0 0;font-size:15px;line-height:1.9;color:rgba(255,255,255,.7)}
+  .hero-sub{max-width:520px;margin:20px 0 0;font-size:15px;line-height:1.9;color:rgba(255,255,255,.7)}
   @media(min-width:768px){.hero-sub{font-size:16.5px;margin-top:28px}}
-  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:11.5px;letter-spacing:.06em;color:rgba(255,255,255,.62)}
+  .hero-trust span{display:inline-flex;align-items:center;gap:7px}
+  .hero-trust span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--accent-2)}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     padding:15px 26px;border-radius:999px;font-size:14px;letter-spacing:.08em;font-weight:600;
@@ -149,7 +152,7 @@
   .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
   .stats{
     position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;
-    border-top:1px solid var(--line-dark);margin-top:44px;
+    border-top:1px solid var(--line-dark);margin-top:30px;
   }
   @media(min-width:860px){.stats{grid-template-columns:repeat(4,1fr)}}
   .stat{padding:20px 0;border-bottom:1px solid var(--line-dark)}
@@ -173,27 +176,35 @@
   @media(min-width:900px){.sec-head{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:60px}}
   .kicker{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.24em;color:var(--accent);font-weight:700}
   .kicker i{font-style:normal;color:var(--steel);font-weight:500}
-  h2{margin:14px 0 0;font-size:clamp(28px,6.4vw,46px);line-height:1.16;font-weight:800;letter-spacing:.01em}
+  h2{margin:14px 0 0;font-size:clamp(30px,6.8vw,46px);line-height:1.18;font-weight:800;letter-spacing:.01em;text-wrap:balance}
   h2 em{font-style:normal;color:var(--accent)}
-  .sec-desc{max-width:430px;color:var(--steel);font-size:14.5px;line-height:1.9;margin:0}
+  .sec-desc{max-width:460px;color:#4C5C68;font-size:16px;line-height:1.95;margin:0;text-wrap:pretty}
   .rule{height:1px;background:var(--line);width:100%}
+  .hl{font-weight:700;color:var(--ink);background:linear-gradient(180deg,transparent 64%,rgba(226,102,27,.22) 64%,rgba(226,102,27,.22) 94%,transparent 94%);padding:0 1px}
+  .dark .hl{color:#fff;background:linear-gradient(180deg,transparent 64%,rgba(226,102,27,.5) 64%,rgba(226,102,27,.5) 94%,transparent 94%)}
+  p{text-wrap:pretty}
 
   /* ---------- about ---------- */
   .about-grid{display:grid;gap:44px}
   @media(min-width:960px){.about-grid{grid-template-columns:1.05fr .95fr;gap:80px;align-items:start}}
-  .about-copy p{margin:0 0 18px;font-size:15px;line-height:2;color:#2C3A44}
+  .about-copy p{margin:0 0 16px;font-size:16px;line-height:2.05;color:#2C3A44;letter-spacing:.005em}
   .about-copy p:last-child{margin-bottom:0}
   .about-copy strong{color:var(--ink);font-weight:700}
-  .about-copy .lead{font-size:17px;line-height:1.95;color:var(--ink);font-weight:500}
+  .about-copy .lead{font-size:18.5px;line-height:1.85;color:var(--ink);font-weight:500;margin-bottom:8px}
+  .about-block h3{display:flex;align-items:center;gap:10px;margin:26px 0 6px;font-size:15.5px;letter-spacing:.06em;font-weight:700}
+  .about-block h3::before{content:"";width:3px;height:15px;background:var(--accent);border-radius:1px}
+  .about-block p:last-child{margin-bottom:0}
+  .creds{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+  .creds span{font-size:11.5px;letter-spacing:.04em;color:#46555F;border:1px solid rgba(11,16,19,.14);border-radius:999px;padding:6px 12px;background:#fff}
   .fields{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:26px}
   .field{background:var(--paper);padding:22px 18px;transition:background .3s var(--ease)}
   .field:hover{background:var(--paper-2)}
   .field span{display:block;font-size:11px;letter-spacing:.16em;color:var(--steel)}
   .field b{display:block;margin-top:8px;font-size:17px;letter-spacing:.02em}
   .quote{
-    margin-top:24px;position:relative;padding:26px 24px 26px 28px;border-left:2px solid var(--accent);
+    margin-top:24px;position:relative;padding:26px 24px 26px 28px;border-left:2px solid var(--accent);font-size:15.5px;
     background:linear-gradient(90deg,rgba(226,102,27,.06),rgba(226,102,27,0));border-radius:0 10px 10px 0;
-    font-size:15px;line-height:1.9;color:#2C3A44;
+    font-size:15.5px;line-height:1.95;color:#2C3A44;
   }
   .quote::before{content:"“";position:absolute;left:10px;top:-6px;font-size:46px;color:rgba(226,102,27,.3);font-family:Georgia,serif}
   .about-media{position:relative}
@@ -233,8 +244,8 @@
     .tl-item:nth-child(even)::before{right:auto;left:-47.5px;top:55px}
   }
   .tl-year{font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--accent);font-variant-numeric:tabular-nums}
-  .tl-title{font-size:16.5px;font-weight:700;margin:7px 0 6px;letter-spacing:.01em}
-  .tl-desc{font-size:13.5px;line-height:1.8;color:var(--steel);margin:0;max-width:330px}
+  .tl-title{font-size:17.5px;font-weight:700;margin:7px 0 8px;letter-spacing:.01em}
+  .tl-desc{font-size:14.5px;line-height:1.85;color:#5C6B77;margin:0;max-width:336px}
   @media(min-width:900px){.tl-item:nth-child(odd) .tl-desc{margin-left:auto}}
   .plan{
     margin-top:8px;display:flex;flex-direction:column;gap:16px;align-items:flex-start;
@@ -256,9 +267,9 @@
   }
   .card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(11,16,19,.4);border-color:rgba(226,102,27,.35)}
   .card .num{font-size:11px;letter-spacing:.2em;color:var(--accent);font-weight:700}
-  .card h3{margin:14px 0 0;font-size:20px;letter-spacing:.04em;font-weight:700}
+  .card h3{margin:14px 0 0;font-size:21px;line-height:1.45;letter-spacing:.03em;font-weight:700}
   .card .sub{margin:4px 0 16px;font-size:11px;letter-spacing:.18em;color:var(--steel);text-transform:uppercase}
-  .card p{margin:0;font-size:14px;line-height:1.9;color:#42505B}
+  .card p{margin:0;font-size:15px;line-height:1.95;color:#42505B}
   .card .glyph{position:absolute;right:16px;top:12px;font-size:76px;line-height:1;font-weight:800;color:rgba(11,16,19,.045);pointer-events:none;letter-spacing:-.04em}
 
   /* ---------- products ---------- */
@@ -286,14 +297,15 @@
   .pcard img{width:100%;aspect-ratio:1/1;object-fit:contain;transition:transform .8s var(--ease)}
   @media(min-width:760px){.pcard img{aspect-ratio:1/1.04}}
   .pcard:hover img{transform:scale(1.04)}
-  .pcard .meta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 14px 14px;border-top:1px solid rgba(11,16,19,.07)}
-  .pcard .meta b{font-size:14.5px;letter-spacing:.02em;font-weight:600}
-  .pcard .meta span{font-size:9.5px;letter-spacing:.1em;color:#96A1A9;white-space:nowrap}
+  .pcard .meta{display:block;padding:13px 14px 15px;border-top:1px solid rgba(11,16,19,.07)}
+  .pcard .meta .cat{display:block;font-size:9px;letter-spacing:.16em;color:#96A1A9;margin-bottom:5px}
+  .pcard .meta b{display:block;font-size:15px;letter-spacing:.01em;font-weight:600;line-height:1.4}
+  .pcard .meta small{display:block;margin-top:4px;font-size:11.5px;color:var(--steel);line-height:1.55;letter-spacing:.01em}
   @media(max-width:759px){
     .pcard.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}
     .pcard.wide .ph{flex:0 0 46%;padding:8px}
     .pcard.wide img{aspect-ratio:1/1}
-    .pcard.wide .meta{flex:1;flex-direction:column;align-items:flex-start;justify-content:center;border-top:0;border-left:1px solid rgba(11,16,19,.07);padding:14px 16px;gap:4px}
+    .pcard.wide .meta{flex:1;border-top:0;border-left:1px solid rgba(11,16,19,.07);padding:14px 16px;display:flex;flex-direction:column;justify-content:center}
   }
   .pnote{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:12.5px;color:var(--steel);letter-spacing:.02em}
   .pnote::before{content:"";width:18px;height:1px;background:var(--accent);display:block;flex:0 0 auto}
@@ -341,19 +353,19 @@
   @media(min-width:860px){.tech{padding:46px 48px;display:grid;grid-template-columns:.85fr 1.15fr;gap:54px}}
   .tech h3{margin:0 0 14px;font-size:clamp(22px,4.6vw,30px);letter-spacing:.02em;line-height:1.3}
   .tech h3 span{color:var(--accent-2);display:block;font-size:12px;letter-spacing:.2em;margin-bottom:10px;font-weight:600}
-  .tech p{margin:0;font-size:13.8px;line-height:1.95;color:rgba(255,255,255,.62)}
+  .tech p{margin:0;font-size:14.8px;line-height:2;color:rgba(255,255,255,.64)}
   .tech ul{margin:0;padding:0;list-style:none;display:grid;gap:16px}
-  .tech li{position:relative;padding-left:26px;font-size:13.6px;line-height:1.8;color:rgba(255,255,255,.72)}
+  .tech li{position:relative;padding-left:26px;font-size:14.4px;line-height:1.85;color:rgba(255,255,255,.74)}
   .tech li b{color:#fff;display:block;font-size:14px;margin-bottom:2px;font-weight:600}
   .tech li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border:1px solid var(--accent);transform:rotate(45deg)}
 
   /* ---------- honors ---------- */
   .honors{display:grid;gap:16px}
-  @media(min-width:760px){.honors{grid-template-columns:1fr 1fr;gap:22px}}
+  @media(min-width:900px){.honors{grid-template-columns:repeat(3,1fr);gap:20px}}
   .honor{background:#fff;border:1px solid rgba(11,16,19,.09);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
   .honor .himg{background:#F0EFEA;padding:14px;cursor:zoom-in}
   .honor .himg img{width:100%;height:300px;object-fit:contain;mix-blend-mode:multiply}
-  @media(min-width:760px){.honor .himg img{height:340px}}
+  @media(min-width:900px){.honor .himg img{height:300px}}
   .honor .hbody{padding:20px 22px 24px;border-top:1px solid rgba(11,16,19,.07)}
   .honor .hbody .k{font-size:10.5px;letter-spacing:.18em;color:var(--accent);font-weight:700}
   .honor .hbody h3{margin:8px 0 12px;font-size:17px;letter-spacing:.02em}
@@ -387,7 +399,7 @@
   .crow .ic{flex:0 0 34px;height:34px;border:1px solid rgba(255,255,255,.18);border-radius:50%;display:grid;place-items:center;color:var(--accent-2)}
   .crow .ic svg{width:15px;height:15px}
   .crow .tx span{display:block;font-size:10.5px;letter-spacing:.18em;color:rgba(255,255,255,.4);margin-bottom:3px}
-  .crow .tx b{font-size:14.5px;font-weight:500;letter-spacing:.02em;line-height:1.6}
+  .crow .tx b{font-size:15.5px;font-weight:500;letter-spacing:.02em;line-height:1.65}
   .crow .tx a{color:var(--accent-2);border-bottom:1px solid rgba(242,160,61,.35)}
   .qr-card{background:#fff;border-radius:16px;padding:24px 24px 20px;color:var(--ink);text-align:center;max-width:330px;margin:0 auto;width:100%;box-shadow:0 40px 80px -40px rgba(0,0,0,.7)}
   .qr-card .qt{font-size:10.5px;letter-spacing:.22em;color:var(--accent);font-weight:700}
@@ -426,6 +438,15 @@
   /* reveal */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
   .reveal.in{opacity:1;transform:none}
+  @media(max-height:720px){
+    .hero{padding-top:96px}
+    .hero-sub{font-size:14px;line-height:1.8;margin-top:16px}
+    .hero-trust{display:none}
+    .hero-actions{margin-top:22px}
+    .stats{margin-top:24px}
+    .stat{padding:16px 0}
+  }
+
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none;transition:none}
     h1 .line>span{animation:none;transform:none}
@@ -492,6 +513,7 @@
         <span class="line"><span><em>齿</em>传匠心</span></span>
       </h1>
       <p class="hero-sub">二十年专注精密齿轮制造，为电动工具、减速电机、新能源与园林工具行业，提供高精度、高耐用性的传动核心部件。</p>
+      <div class="hero-trust"><span>ISO9001 认证</span><span>浙江省科技型中小企业</span><span>2021 年度最佳供应商</span></div>
       <div class="hero-actions">
         <a href="#products" class="btn btn-primary">浏览产品系列
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -520,10 +542,28 @@
 
       <div class="about-grid">
         <div class="about-copy reveal">
-          <p class="lead">武义县钧威齿轮制造有限公司是一家专业生产<strong>电动工具、减速电机、新能源、园林工具齿轮</strong>的厂家。</p>
-          <p>主要产品涵盖电镐、电锤、偏心轴及 18 / 22 / 28 / 32 系列、老年车传动齿轮等，年规划产能达 <strong>500 万套以上</strong>，并持续扩充产能，充分满足不同客户的产品需求。</p>
-          <p>公司生产设备精良，拥有各式加工设备 <strong>100 余台</strong>，持续导入数控机床、自动化滚齿机、车铣复合机、自动外圆磨、数控磨齿机等先进装备。技术力量雄厚、工艺先进，严格按照 ISO 质量管理体系标准执行，并通过 <strong>GB/T19001-2016 / ISO9001:2015</strong> 认证，可靠的产品品质深受广大客户肯定，销售网络覆盖全国各地。</p>
-          <p>多年来，公司导入精益生产管理，在现场 6S 管理、品质体制构建、生产计划管理等方面共同着力，多次荣获客户<strong>最佳供应商</strong>称号。竭诚欢迎广大客户来电来函洽谈合作，携手创造辉煌的明天。</p>
+          <p class="lead">武义县钧威齿轮制造有限公司是一家专业生产<span class="hl">电动工具、减速电机、新能源、园林工具齿轮</span>的厂家。</p>
+
+          <div class="about-block">
+            <h3>产能与产品</h3>
+            <p>主要产品涵盖电镐、电锤、偏心轴及 18 / 22 / 28 / 32 系列、老年车传动齿轮等，年规划产能达 <span class="hl">500 万套以上</span>，并持续扩充产能，充分满足不同客户的产品需求。</p>
+          </div>
+
+          <div class="about-block">
+            <h3>装备与工艺</h3>
+            <p>拥有各式加工设备 <span class="hl">100 余台</span>，持续导入数控机床、自动化滚齿机、车铣复合机、自动外圆磨、数控磨齿机等先进装备。技术力量雄厚、工艺先进，严格按照 ISO 质量管理体系标准执行，并通过 GB/T19001-2016 / ISO9001:2015 认证，可靠的产品品质深受广大客户肯定，销售网络覆盖全国各地。</p>
+          </div>
+
+          <div class="about-block">
+            <h3>管理与服务</h3>
+            <p>多年来持续导入精益生产管理，在现场 6S 管理、品质体制构建、生产计划管理等方面共同着力，多次荣获客户<span class="hl">最佳供应商</span>称号。急客户所急，想客户所想，心系客户，贴近市场，真诚服务。</p>
+          </div>
+
+          <div class="creds">
+            <span>ISO9001 质量管理体系</span>
+            <span>浙江省科技型中小企业</span>
+            <span>2021 年度最佳供应商</span>
+          </div>
         </div>
 
         <div class="reveal">
@@ -625,13 +665,13 @@
           <div class="glyph">01</div>
           <div class="num">MISSION / 企业使命</div>
           <h3>提供高精度、高耐用性的核心部件</h3>
-          <p>秉承为行业提供高精度、高耐用性齿轮核心部件的企业理念，通过持续技术革新与工艺优化，帮助客户提升产品竞争力。</p>
+          <p>秉承为行业提供<span class="hl">高精度、高耐用性</span>齿轮核心部件的企业理念，通过持续技术革新与工艺优化，帮助客户提升产品竞争力。</p>
         </article>
         <article class="card reveal">
           <div class="glyph">02</div>
           <div class="num">VISION / 企业愿景</div>
           <h3>成为行业齿轮制造优选供应商</h3>
-          <p>3–5 年成为行业齿轮制造优选供应商，以稳定可靠的产品质量和快速响应的服务能力赢得客户深度认可；持续优化生产流程、降低成本、提升效率，打造高性价比的齿轮产品。</p>
+          <p><span class="hl">3–5 年</span>成为行业齿轮制造优选供应商，以稳定可靠的产品质量和快速响应的服务能力赢得客户深度认可；持续优化生产流程、降低成本、提升效率，打造高性价比的齿轮产品。</p>
         </article>
         <article class="card reveal">
           <div class="glyph">03</div>
@@ -671,15 +711,15 @@
           <div class="pgrid">
             <figure class="pcard" data-zoom="assets/p-hammer.jpg" data-caption="电锤系列">
               <div class="ph"><img src="assets/p-hammer.jpg" alt="电锤系列齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>电锤系列</b><span>POWER TOOLS</span></figcaption>
+              <figcaption class="meta"><span class="cat">POWER TOOLS</span><b>电锤系列</b><small>冲击类电动工具传动齿轮</small></figcaption>
             </figure>
             <figure class="pcard" data-zoom="assets/p-breaker.jpg" data-caption="电镐系列">
               <div class="ph"><img src="assets/p-breaker.jpg" alt="电镐系列齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>电镐系列</b><span>POWER TOOLS</span></figcaption>
+              <figcaption class="meta"><span class="cat">POWER TOOLS</span><b>电镐系列</b><small>电镐传动齿轮与偏心轴</small></figcaption>
             </figure>
             <figure class="pcard wide" data-zoom="assets/p-cylinder.jpg" data-caption="缸套系列">
               <div class="ph"><img src="assets/p-cylinder.jpg" alt="缸套系列" loading="lazy"></div>
-              <figcaption class="meta"><b>缸套系列</b><span>POWER TOOLS</span></figcaption>
+              <figcaption class="meta"><span class="cat">POWER TOOLS</span><b>缸套系列</b><small>齿轮配套缸套类零件</small></figcaption>
             </figure>
           </div>
         </div>
@@ -688,15 +728,15 @@
           <div class="pgrid">
             <figure class="pcard" data-zoom="assets/p-reducer.jpg" data-caption="减速机系列">
               <div class="ph"><img src="assets/p-reducer.jpg" alt="减速机系列齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>减速机系列</b><span>GEAR MOTOR</span></figcaption>
+              <figcaption class="meta"><span class="cat">GEAR MOTOR</span><b>减速机系列</b><small>18 / 22 / 28 / 32 系列减速齿轮</small></figcaption>
             </figure>
             <figure class="pcard" data-zoom="assets/p-reducer-new.jpg" data-caption="新品减速机系列">
               <div class="ph"><img src="assets/p-reducer-new.jpg" alt="新品减速机系列" loading="lazy"></div>
-              <figcaption class="meta"><b>新品减速机系列</b><span>GEAR MOTOR</span></figcaption>
+              <figcaption class="meta"><span class="cat">GEAR MOTOR</span><b>新品减速机系列</b><small>新型减速机齿轮平台</small></figcaption>
             </figure>
             <figure class="pcard wide" data-zoom="assets/p-parking.jpg" data-caption="立体车库减速电机系列">
               <div class="ph"><img src="assets/p-parking.jpg" alt="立体车库减速电机系列" loading="lazy"></div>
-              <figcaption class="meta"><b>立体车库减速电机</b><span>GEAR MOTOR</span></figcaption>
+              <figcaption class="meta"><span class="cat">GEAR MOTOR</span><b>立体车库减速电机</b><small>升降横移机构减速传动</small></figcaption>
             </figure>
           </div>
         </div>
@@ -705,19 +745,19 @@
           <div class="pgrid">
             <figure class="pcard" data-zoom="assets/p-agri.jpg" data-caption="农用机械系列">
               <div class="ph"><img src="assets/p-agri.jpg" alt="农用机械系列齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>农用机械系列</b><span>AGRICULTURE</span></figcaption>
+              <figcaption class="meta"><span class="cat">AGRICULTURE</span><b>农用机械系列</b><small>农机重载传动齿轮</small></figcaption>
             </figure>
             <figure class="pcard" data-zoom="assets/p-gearbox.jpg" data-caption="变速箱系列">
               <div class="ph"><img src="assets/p-gearbox.jpg" alt="变速箱系列齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>变速箱系列</b><span>TRANSMISSION</span></figcaption>
+              <figcaption class="meta"><span class="cat">TRANSMISSION</span><b>变速箱系列</b><small>变速箱齿轮及轴类零件</small></figcaption>
             </figure>
             <figure class="pcard" data-zoom="assets/p-garden.jpg" data-caption="园林工具系列">
               <div class="ph"><img src="assets/p-garden.jpg" alt="园林工具系列齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>园林工具系列</b><span>GARDEN TOOLS</span></figcaption>
+              <figcaption class="meta"><span class="cat">GARDEN TOOLS</span><b>园林工具系列</b><small>园林工具传动齿轮</small></figcaption>
             </figure>
             <figure class="pcard" data-zoom="assets/p-ev.jpg" data-caption="新能源车系列">
               <div class="ph"><img src="assets/p-ev.jpg" alt="新能源车传动齿轮" loading="lazy"></div>
-              <figcaption class="meta"><b>新能源车系列</b><span>NEW ENERGY</span></figcaption>
+              <figcaption class="meta"><span class="cat">NEW ENERGY</span><b>新能源车系列</b><small>新能源车传动齿轮部件</small></figcaption>
             </figure>
           </div>
         </div>
@@ -827,6 +867,21 @@
       </div>
       <div class="honors">
         <article class="honor reveal">
+          <div class="himg" data-zoom="assets/cert-sme.jpg" data-caption="浙江省科技型中小企业证书">
+            <img src="assets/cert-sme.jpg" alt="浙江省科技型中小企业证书" loading="lazy">
+          </div>
+          <div class="hbody">
+            <div class="k">2024 · 浙江省科学技术厅</div>
+            <h3>浙江省科技型中小企业</h3>
+            <dl>
+              <div><dt>证书编号</dt><dd>20243307000424</dd></div>
+              <div><dt>认定年度</dt><dd>2024 年</dd></div>
+              <div><dt>发证机关</dt><dd>浙江省科学技术厅</dd></div>
+              <div><dt>年报要求</dt><dd>每年 12 月底前填报发展情况报表</dd></div>
+            </dl>
+          </div>
+        </article>
+        <article class="honor reveal">
           <div class="himg" data-zoom="assets/cert-iso.jpg" data-caption="质量管理体系认证证书">
             <img src="assets/cert-iso.jpg" alt="质量管理体系认证证书" loading="lazy">
           </div>
@@ -893,16 +948,20 @@
           <p class="lead">无论批量配套还是新品开发，欢迎来电来函，钧威齿轮愿与您一起把产品做得更稳、更准。</p>
           <div class="crows">
             <div class="crow">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20a7.5 7.5 0 0115 0"/></svg></div>
+              <div class="tx"><span>总经理</span><b>俞建忠</b></div>
+            </div>
+            <div class="crow">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h3l2 5-2.5 1.5a13 13 0 006 6L15 13l5 2v3a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg></div>
+              <div class="tx"><span>联系电话</span><b><a href="tel:13758946885">137 5894 6885</a></b></div>
+            </div>
+            <div class="crow">
               <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
-              <div class="tx"><span>公司地址</span><b>浙江省金华市武义县岗头工业区</b></div>
+              <div class="tx"><span>公司地址</span><b>浙江省金华市武义县岗头工业区<br>武义县钧威齿轮制造有限公司</b></div>
             </div>
             <div class="crow">
               <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V6a2 2 0 012-2h8a2 2 0 012 2v14M4 20h12M4 20H2m16 0h4M16 9h4a2 2 0 012 2v9"/><path d="M8 8h4M8 12h4"/></svg></div>
               <div class="tx"><span>主营产品</span><b>电动工具 / 减速电机 / 新能源 / 园林工具齿轮</b></div>
-            </div>
-            <div class="crow" id="phoneRow" hidden>
-              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h3l2 5-2.5 1.5a13 13 0 006 6L15 13l5 2v3a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg></div>
-              <div class="tx"><span>联系电话</span><b><a id="phoneLink" href="#"></a></b></div>
             </div>
             <div class="crow">
               <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
@@ -1049,16 +1108,10 @@
     if(e.key==='ArrowRight')openLb(idx+1);
   });
 
-  /* lead phone (configured by build) */
-  var PHONE='';
-  if(PHONE){
-    var row=document.getElementById('phoneRow'), link=document.getElementById('phoneLink');
-    row.hidden=false; link.textContent=PHONE; link.href='tel:'+PHONE.replace(/\s/g,'');
-  }
 })();
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"武义县钧威齿轮制造有限公司","alternateName":"钧威齿轮 / JUNWEI GEAR","description":"专业生产电动工具、减速电机、新能源、园林工具齿轮的制造企业，年规划产能 500 万套以上，通过 ISO9001 质量管理体系认证。","foundingDate":"2018-01-18","address":{"@type":"PostalAddress","addressRegion":"浙江省","addressLocality":"金华市武义县","streetAddress":"岗头工业区","addressCountry":"CN"},"knowsAbout":["电动工具齿轮","减速电机齿轮","园林工具齿轮","新能源车齿轮"]}
+{"@context":"https://schema.org","@type":"Organization","name":"武义县钧威齿轮制造有限公司","alternateName":"钧威齿轮 / JUNWEI GEAR","description":"专业生产电动工具、减速电机、新能源、园林工具齿轮的制造企业，年规划产能 500 万套以上，通过 ISO9001 质量管理体系认证。","foundingDate":"2018-01-18","telephone":"+86-137-5894-6885","founder":{"@type":"Person","name":"俞建忠","jobTitle":"总经理"},"address":{"@type":"PostalAddress","addressRegion":"浙江省","addressLocality":"金华市武义县","streetAddress":"岗头工业区","addressCountry":"CN"},"knowsAbout":["电动工具齿轮","减速电机齿轮","园林工具齿轮","新能源车齿轮"]}
 </script>
 </body>
 </html>
