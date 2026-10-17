@@ -37,6 +37,8 @@
   }
   body.lock{overflow:hidden}
   img{max-width:100%;display:block}
+  figure{margin:0}
+  figcaption{margin:0}
   a{color:inherit;text-decoration:none}
   button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   ::selection{background:var(--accent);color:#fff}
@@ -44,6 +46,7 @@
   @media(min-width:768px){.wrap{padding:0 40px}}
 
   /* ---------- progress ---------- */
+  .wx-thumb{position:absolute;left:-9999px;top:0;width:300px;height:300px;opacity:0;pointer-events:none}
   #progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:120;transition:width .1s linear}
 
   /* ---------- header ---------- */
@@ -122,7 +125,7 @@
   .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;letter-spacing:.24em;color:var(--accent-2);text-transform:uppercase;margin-bottom:22px}
   .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;display:block}
   h1{
-    margin:0;font-size:clamp(44px,12.5vw,92px);line-height:1.02;font-weight:800;letter-spacing:.02em;
+    margin:0;font-size:clamp(44px,12.5vw,92px);line-height:1.07;font-weight:800;letter-spacing:.02em;
   }
   h1 .line{display:block;overflow:hidden}
   h1 .line>span{display:block;transform:translateY(110%);animation:rise .9s var(--ease) forwards}
@@ -163,7 +166,7 @@
   .stat span{display:block;margin-top:9px;font-size:11.5px;letter-spacing:.18em;color:rgba(255,255,255,.52)}
 
   /* ---------- section shell ---------- */
-  section{position:relative}
+  section{position:relative;scroll-margin-top:64px}
   .sec{padding:78px 0}
   @media(min-width:768px){.sec{padding:118px 0}}
   .sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:42px}
@@ -188,7 +191,7 @@
   .field span{display:block;font-size:11px;letter-spacing:.16em;color:var(--steel)}
   .field b{display:block;margin-top:8px;font-size:17px;letter-spacing:.02em}
   .quote{
-    position:relative;padding:26px 24px 26px 28px;border-left:2px solid var(--accent);
+    margin-top:24px;position:relative;padding:26px 24px 26px 28px;border-left:2px solid var(--accent);
     background:linear-gradient(90deg,rgba(226,102,27,.06),rgba(226,102,27,0));border-radius:0 10px 10px 0;
     font-size:15px;line-height:1.9;color:#2C3A44;
   }
@@ -274,16 +277,24 @@
   .pgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   @media(min-width:760px){.pgrid{grid-template-columns:repeat(3,1fr);gap:20px}}
   .pcard{
-    position:relative;border-radius:12px;overflow:hidden;background:#E9E8E2;cursor:zoom-in;
-    border:1px solid rgba(11,16,19,.07);
+    background:#fff;border-radius:12px;overflow:hidden;cursor:zoom-in;
+    border:1px solid rgba(11,16,19,.08);transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s;
+    display:flex;flex-direction:column;
   }
-  .pcard .ph{position:relative;overflow:hidden;background:#EDECE6}
-  .pcard img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
-  @media(min-width:760px){.pcard img{aspect-ratio:4/3.4}}
-  .pcard:hover img{transform:scale(1.06)}
-  .pcard .meta{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 13px;color:#fff;background:linear-gradient(180deg,transparent,rgba(7,11,14,.78));display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
-  .pcard .meta b{font-size:14.5px;letter-spacing:.02em;font-weight:600;text-shadow:0 1px 10px rgba(0,0,0,.35)}
-  .pcard .meta span{font-size:10px;letter-spacing:.1em;opacity:.75;white-space:nowrap}
+  .pcard:hover{transform:translateY(-4px);box-shadow:0 22px 40px -30px rgba(11,16,19,.5);border-color:rgba(226,102,27,.35)}
+  .pcard .ph{position:relative;overflow:hidden;background:#F1F0EA;padding:10px;flex:1}
+  .pcard img{width:100%;aspect-ratio:1/1;object-fit:contain;transition:transform .8s var(--ease)}
+  @media(min-width:760px){.pcard img{aspect-ratio:1/1.04}}
+  .pcard:hover img{transform:scale(1.04)}
+  .pcard .meta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 14px 14px;border-top:1px solid rgba(11,16,19,.07)}
+  .pcard .meta b{font-size:14.5px;letter-spacing:.02em;font-weight:600}
+  .pcard .meta span{font-size:9.5px;letter-spacing:.1em;color:#96A1A9;white-space:nowrap}
+  @media(max-width:759px){
+    .pcard.wide{grid-column:1/-1;flex-direction:row;align-items:stretch}
+    .pcard.wide .ph{flex:0 0 46%;padding:8px}
+    .pcard.wide img{aspect-ratio:1/1}
+    .pcard.wide .meta{flex:1;flex-direction:column;align-items:flex-start;justify-content:center;border-top:0;border-left:1px solid rgba(11,16,19,.07);padding:14px 16px;gap:4px}
+  }
   .pnote{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:12.5px;color:var(--steel);letter-spacing:.02em}
   .pnote::before{content:"";width:18px;height:1px;background:var(--accent);display:block;flex:0 0 auto}
 
@@ -311,6 +322,12 @@
   .ecard .cap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:15px 16px}
   .ecard .cap b{font-size:14px;font-weight:600;letter-spacing:.02em}
   .ecard .cap i{font-style:normal;font-size:10px;color:rgba(255,255,255,.35);letter-spacing:.14em}
+  @media(max-width:679px){
+    .egrid{grid-template-columns:1fr 1fr;gap:10px;margin:0 -4px}
+    .ecard .cap{padding:11px 11px 13px;flex-direction:column;align-items:flex-start;gap:2px}
+    .ecard .cap b{font-size:12.5px;line-height:1.5}
+    .ecard .cap i{font-size:8.5px;letter-spacing:.08em}
+  }
 
   /* ---------- testing ---------- */
   .tgrid{display:grid;gap:14px;margin-bottom:44px}
@@ -353,6 +370,9 @@
   .logo-cell{background:#fff;display:grid;place-items:center;padding:20px;aspect-ratio:3/2}
   .logo-cell img{max-height:52px;max-width:100%;object-fit:contain;filter:grayscale(1);opacity:.62;transition:filter .4s var(--ease),opacity .4s,transform .4s var(--ease)}
   .logo-cell:hover img{filter:none;opacity:1;transform:scale(1.04)}
+  .logo-cell.cta{background:var(--ink);color:#fff;font-size:12.5px;letter-spacing:.06em;line-height:1.7;text-align:center;padding:14px}
+  .logo-cell.cta b{display:block;font-size:15px;margin-bottom:4px;font-weight:600}
+  @media(min-width:560px) and (max-width:899px){.logo-cell.cta{display:none}}
 
   /* ---------- contact ---------- */
   .contact{background:var(--ink);color:#fff;overflow:hidden;position:relative}
@@ -382,15 +402,15 @@
   footer b{color:rgba(255,255,255,.72);font-weight:500}
 
   /* ---------- floating ---------- */
-  #top{
+  #toTop{
     position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:80;
     width:44px;height:44px;border-radius:50%;background:rgba(11,16,19,.78);color:#fff;
     display:grid;place-items:center;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
     opacity:0;pointer-events:none;transform:translateY(8px);transition:all .35s var(--ease);
     border:1px solid rgba(255,255,255,.14);
   }
-  #top.show{opacity:1;pointer-events:auto;transform:none}
-  #top svg{width:15px;height:15px}
+  #toTop.show{opacity:1;pointer-events:auto;transform:none}
+  #toTop svg{width:15px;height:15px}
 
   /* ---------- lightbox ---------- */
   .lb{position:fixed;inset:0;z-index:200;background:rgba(6,9,11,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
@@ -416,6 +436,7 @@
 </style>
 </head>
 <body>
+<img class="wx-thumb" src="assets/share-300.jpg" alt="" aria-hidden="true">
 <div id="progress"></div>
 
 <header class="nav" id="nav">
@@ -581,12 +602,10 @@
           <h3 class="tl-title">通过 ISO9001 认证</h3>
           <p class="tl-desc">同年 8 月通过 9001 质量体系认证，公司正式走上规范化道路。</p>
         </div>
-        <div class="tl-item reveal" style="grid-column:1/-1">
-          <div class="plan">
-            <div class="p-txt"><b>长期规划</b>在 2024 年基础上，持续扩充产能与工艺能力。</div>
-            <div class="p-num">2027 · 产值翻番</div>
-          </div>
-        </div>
+      </div>
+      <div class="plan reveal" style="margin-top:10px">
+        <div class="p-txt"><b>长期规划</b>在 2024 年基础上，持续扩充产能与工艺能力。</div>
+        <div class="p-num">2027 · 产值翻番</div>
       </div>
     </div>
   </section>
@@ -658,7 +677,7 @@
               <div class="ph"><img src="assets/p-breaker.jpg" alt="电镐系列齿轮" loading="lazy"></div>
               <figcaption class="meta"><b>电镐系列</b><span>POWER TOOLS</span></figcaption>
             </figure>
-            <figure class="pcard" data-zoom="assets/p-cylinder.jpg" data-caption="缸套系列">
+            <figure class="pcard wide" data-zoom="assets/p-cylinder.jpg" data-caption="缸套系列">
               <div class="ph"><img src="assets/p-cylinder.jpg" alt="缸套系列" loading="lazy"></div>
               <figcaption class="meta"><b>缸套系列</b><span>POWER TOOLS</span></figcaption>
             </figure>
@@ -675,7 +694,7 @@
               <div class="ph"><img src="assets/p-reducer-new.jpg" alt="新品减速机系列" loading="lazy"></div>
               <figcaption class="meta"><b>新品减速机系列</b><span>GEAR MOTOR</span></figcaption>
             </figure>
-            <figure class="pcard" data-zoom="assets/p-parking.jpg" data-caption="立体车库减速电机系列">
+            <figure class="pcard wide" data-zoom="assets/p-parking.jpg" data-caption="立体车库减速电机系列">
               <div class="ph"><img src="assets/p-parking.jpg" alt="立体车库减速电机系列" loading="lazy"></div>
               <figcaption class="meta"><b>立体车库减速电机</b><span>GEAR MOTOR</span></figcaption>
             </figure>
@@ -840,7 +859,7 @@
   </section>
 
   <!-- CLIENTS -->
-  <section class="sec clients" id="clients">
+  <section class="sec clients" id="clients" style="background:#fff">
     <div class="wrap">
       <div class="sec-head reveal">
         <div>
@@ -859,6 +878,7 @@
         <div class="logo-cell"><img src="assets/c-7.jpg" alt="合作客户"></div>
         <div class="logo-cell"><img src="assets/c-8.jpg" alt="合作客户"></div>
         <div class="logo-cell"><img src="assets/c-9.jpg" alt="合作客户"></div>
+        <div class="logo-cell cta"><div><b>邀您成为下一个伙伴</b>期待与您携手共赢</div></div>
       </div>
     </div>
   </section>
@@ -911,7 +931,7 @@
   </div>
 </footer>
 
-<a href="#top" id="top" aria-label="回到顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+<a href="#top" id="toTop" aria-label="回到顶部"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
 
 <div class="lb" id="lb" aria-modal="true" role="dialog" aria-label="图片查看">
   <button class="x" id="lbClose" aria-label="关闭">✕</button>
@@ -930,7 +950,7 @@
   document.getElementById('year').textContent=new Date().getFullYear();
 
   /* header state + progress */
-  var nav=$('#nav'), bar=$('#progress'), topBtn=$('#top');
+  var nav=$('#nav'), bar=$('#progress'), topBtn=$('#toTop');
   function onScroll(){
     var y=window.pageYOffset||document.documentElement.scrollTop;
     nav.classList.toggle('solid', y>60);
@@ -1036,6 +1056,9 @@
     row.hidden=false; link.textContent=PHONE; link.href='tel:'+PHONE.replace(/\s/g,'');
   }
 })();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"武义县钧威齿轮制造有限公司","alternateName":"钧威齿轮 / JUNWEI GEAR","description":"专业生产电动工具、减速电机、新能源、园林工具齿轮的制造企业，年规划产能 500 万套以上，通过 ISO9001 质量管理体系认证。","foundingDate":"2018-01-18","address":{"@type":"PostalAddress","addressRegion":"浙江省","addressLocality":"金华市武义县","streetAddress":"岗头工业区","addressCountry":"CN"},"knowsAbout":["电动工具齿轮","减速电机齿轮","园林工具齿轮","新能源车齿轮"]}
 </script>
 </body>
 </html>
